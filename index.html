@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elearning Web 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eaf2ff, #f8faff);
+            color: #24324a;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #17428c;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2456b3;
+        }
+
+        p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        button {
+            background: #2456b3;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #173d85;
+        }
+
+        #waktu, #pesan {
+            margin-top: 15px;
+            color: #17428c;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Muhamad Khusni Kamalludin (24552011227)</h1>
+
+        <!-- Heading -->
+        <h2>Selamat Datang di Website Saya</h2>
+
+        <!-- Paragraf 1 -->
+        <p id="teks">
+            Selamat datang di halaman website sederhana saya.
+            Website ini dibuat menggunakan HTML, CSS, dan JavaScript.
+            HTML digunakan untuk membuat struktur halaman website.
+        </p>
+
+        <!-- Paragraf 2 -->
+        <p>
+            CSS digunakan untuk mengatur tampilan website seperti warna
+            background, ukuran tulisan, jarak, dan tata letak agar
+            website terlihat lebih menarik dan nyaman dilihat.
+        </p>
+
+        <!-- Paragraf 3 -->
+        <p>
+            JavaScript digunakan untuk memberikan interaksi kepada
+            pengguna. Dengan JavaScript, website dapat menjalankan
+            perintah tertentu ketika tombol ditekan.
+        </p>
+
+        <h2>Interaksi JavaScript</h2>
+
+        <p>
+            Silakan tekan tombol berikut untuk mencoba fitur
+            JavaScript pada halaman website ini.
+        </p>
+
+        <button onclick="tampilkanWaktu()">
+            Tampilkan Tanggal dan Jam
+        </button>
+
+        <button onclick="ubahTeks()">
+            Ubah Teks Halaman
+        </button>
+
+        <button onclick="tampilkanPesan()">
+            Tampilkan Pesan
+        </button>
+
+        <div id="waktu"></div>
+        <div id="pesan"></div>
+
+        <footer>
+            <p>© 2026 Muhamad Khusni Kamalludin (24552011227) | Pemrograman Web 1</p>
+        </footer>
+
+    </div>
+
+    <script>
+
+        // Menampilkan tanggal dan jam
+        function tampilkanWaktu() {
+            const sekarang = new Date();
+
+            document.getElementById("waktu").textContent =
+                "Tanggal dan Jam: " +
+                sekarang.toLocaleString("id-ID");
+        }
+
+        // Mengubah teks halaman
+        function ubahTeks() {
+            document.getElementById("teks").textContent =
+                "Teks berhasil diubah menggunakan JavaScript! Selamat belajar pemrograman web.";
+        }
+
+        // Menampilkan pesan
+        function tampilkanPesan() {
+            alert("Selamat datang di website Nama Mahasiswa!");
+        }
+
+    </script>
+
+</body>
+</html>
